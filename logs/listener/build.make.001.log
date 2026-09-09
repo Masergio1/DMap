@@ -1,0 +1,11 @@
+[ 36%] Built target rp_library
+[35m[1mScanning dependencies of target listener_node[0m
+[ 45%] Built target dmap_localizer_test
+[ 54%] Built target rp_simulator
+[ 63%] Built target dmap_grid_localizer_test
+[ 72%] Built target dmap_test_in_class
+[ 81%] Built target grid_main
+[ 90%] Built target test_grid_map
+[ 95%] [32mBuilding CXX object src/CMakeFiles/listener_node.dir/listener_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/lattinone/Desktop/progetto/RP_Dmap/devel/.private/listener/lib/listener/listener_node[0m
+[100%] Built target listener_node

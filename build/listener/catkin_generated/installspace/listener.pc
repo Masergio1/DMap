@@ -1,0 +1,8 @@
+prefix=/home/lattinone/Desktop/progetto/RP_Dmap/install
+
+Name: listener
+Description: Description of listener
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs geometry_msgs nav_msgs tf2 tf2_ros tf2_geometry_msgs

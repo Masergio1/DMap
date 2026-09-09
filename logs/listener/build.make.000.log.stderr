@@ -1,0 +1,94 @@
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:[m[K In member function ‘[01m[Kbool DMapLocalizer::localize(const std::vector<Eigen::Matrix<float, 2, 1> >&, int)[m[K’:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:125:31:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  125 |       float e=distances(p_grid[01;35m[K)[m[K;
+      |                               [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:125:31:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  125 |       float e=distances(p_grid[01;35m[K)[m[K;
+      |                               [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:133:37:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  133 |       J_dmap.x()=distances_dc(p_grid[01;35m[K)[m[K;
+      |                                     [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:133:37:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  133 |       J_dmap.x()=distances_dc(p_grid[01;35m[K)[m[K;
+      |                                     [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:134:37:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  134 |       J_dmap.y()=distances_dr(p_grid[01;35m[K)[m[K;
+      |                                     [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:134:37:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  134 |       J_dmap.y()=distances_dr(p_grid[01;35m[K)[m[K;
+      |                                     [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid_main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid_main.cpp:21:33:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+   21 |       cout << grid(Vector2f(c,r)[01;35m[K)[m[K << " ";
+      |                                 [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid_main.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid_main.cpp:21:33:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+   21 |       cout << grid(Vector2f(c,r)[01;35m[K)[m[K << " ";
+      |                                 [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid_main.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/progetto/RP_Dmap/src/listener/src/rp_stuff/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K

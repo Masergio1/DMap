@@ -1,0 +1,6 @@
+devel_space: /home/lattinone/Desktop/progetto/RP_Dmap/devel
+install: false
+install_space: /home/lattinone/Desktop/progetto/RP_Dmap/install
+profile: default
+source_space: /home/lattinone/Desktop/progetto/RP_Dmap/src
+workspace: /home/lattinone/Desktop/progetto/RP_Dmap
