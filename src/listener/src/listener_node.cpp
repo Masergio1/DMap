@@ -93,10 +93,14 @@ std::vector<Vector2f> extractObstaclesFromMap(
             int8_t cell_value = grid_msg->data[cell_index];
 
             if (cell_value >= occupied_limit) {
-                result.emplace_back(
-                    static_cast<float>(col),
-                    static_cast<float>(row)
+                Vector2f world_position = map_handler.grid2world(
+                    Vector2f(
+                        static_cast<float>(col),
+                        static_cast<float>(row)
+                    )
                 );
+
+                result.emplace_back(world_position);
             }
         }
     }
@@ -105,12 +109,24 @@ std::vector<Vector2f> extractObstaclesFromMap(
 }
 
 void onMapReceived(const nav_msgs::OccupancyGrid::ConstPtr& map_msg) {
+    if (has_map) {
+        ROS_WARN("Mappa già ricevuta, ignoro il nuovo messaggio.");
+        return;
+    }
+
+    ROS_INFO(
+        "Mappa ricevuta. Frame: %s",
+        map_msg->header.frame_id.c_str()
+    );
+
     map_resolution = map_msg->info.resolution;
 
     Vector2f map_origin(
         map_msg->info.origin.position.x,
         map_msg->info.origin.position.y
     );
+
+    map_handler.reset(map_origin, map_resolution);
 
     occupied_cells = extractObstaclesFromMap(map_msg);
 
@@ -119,8 +135,6 @@ void onMapReceived(const nav_msgs::OccupancyGrid::ConstPtr& map_msg) {
         map_resolution,
         max_influence_distance
     );
-
-    map_handler.reset(map_origin, map_resolution);
 
     has_map = true;
 
