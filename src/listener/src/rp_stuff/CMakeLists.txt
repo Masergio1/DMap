@@ -2,9 +2,6 @@
 add_library(rp_library SHARED
   grid_map.cpp
   draw_helpers.cpp
-  laser_scan.cpp
-  world_item.cpp
-  laser_scanner.cpp
   dmap.cpp
   dmap_localizer.cpp)
 
@@ -12,6 +9,9 @@ target_link_libraries(rp_library
   ${OpenCV_LIBS}
   )
 
+option(BUILD_RP_DEMOS "Build standalone teaching examples and simulator" OFF)
+if(BUILD_RP_DEMOS)
+  target_sources(rp_library PRIVATE laser_scan.cpp world_item.cpp laser_scanner.cpp)
 add_executable(grid_main
   grid_main.cpp)
 
@@ -62,3 +62,4 @@ target_link_libraries(rp_simulator
   rp_library
   )
 
+endif()

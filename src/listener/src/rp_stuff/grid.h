@@ -172,7 +172,7 @@ struct CT{
              const float res) {
     _g2w.linear() <<
       res, 0,
-      0, -res;
+      0, res;
     _g2w.translation()=grid_origin;
     _w2g=_g2w.inverse();
   }

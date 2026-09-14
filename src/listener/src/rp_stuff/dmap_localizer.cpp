@@ -120,6 +120,8 @@ bool DMapLocalizer::localize(const std::vector<Vector2f>& measurements,
     for (const auto& m: measurements) {
       Vector2f p_world = X*m;
       Vector2f p_grid=grid_mapping.world2grid(p_world);
+      // Convenzione di scansione del progetto di riferimento RP_Dmap-main.
+      p_grid.y()*=-1;
       if (! distances.inside(p_grid))
         continue;
       float e=distances(p_grid);

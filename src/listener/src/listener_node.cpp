@@ -114,12 +114,23 @@ void onMapReceived(const nav_msgs::OccupancyGrid::ConstPtr& map_msg) {
 
     occupied_cells = extractObstaclesFromMap(map_msg);
 
+    if (occupied_cells.empty()) {
+        ROS_WARN("La mappa non contiene celle occupate: attendo una mappa valida.");
+        return;
+    }
+
+    // setMap modifica X: conserva una posa eventualmente arrivata prima della mappa.
+    const Eigen::Isometry2f previous_pose = robot_localizer.X;
     robot_localizer.setMap(
         occupied_cells,
         map_resolution,
         max_influence_distance
     );
 
+    robot_localizer.X.setIdentity();
+    if (has_start_pose) {
+        robot_localizer.X = previous_pose;
+    }
     has_map = true;
 
     ROS_INFO(
@@ -135,20 +146,22 @@ void computeScanEndpoints(
     destination.clear();
 
     for (size_t i = 0; i < scan_msg->ranges.size(); ++i) {
-        const float angle = scan_msg->angle_min +
-                            static_cast<float>(i) * scan_msg->angle_increment;
 
         const float range = scan_msg->ranges[i];
 
-        if (range < scan_msg->range_min || range > scan_msg->range_max) {
+        if (!std::isfinite(range) ||
+            range < scan_msg->range_min ||
+            range > scan_msg->range_max) {
             continue;
         }
 
-        destination.push_back(
-            Vector2f(
-                range * std::cos(angle),
-                range * std::sin(angle)
-            )
+        const float angle =
+            scan_msg->angle_min +
+            static_cast<float>(i) * scan_msg->angle_increment;
+
+        destination.emplace_back(
+            range * std::cos(angle),
+            range * std::sin(angle)
         );
     }
 }
@@ -165,6 +178,11 @@ void onLaserScanReceived(const sensor_msgs::LaserScan::ConstPtr& scan_msg) {
     std::vector<Vector2f> scan_points;
 
     computeScanEndpoints(scan_points, scan_msg);
+
+    if (scan_points.empty()) {
+        ROS_WARN_THROTTLE(1.0, "Scansione senza misure valide: aggiornamento saltato.");
+        return;
+    }
 
     robot_localizer.localize(scan_points, 10);
 
@@ -190,6 +208,8 @@ void onInitialPoseReceived(
         "Posa iniziale ricevuta. Frame: %s",
         pose_msg->header.frame_id.c_str()
     );
+    
+    robot_localizer.X.setIdentity();
 
     robot_localizer.X.translation().x() = pose_msg->pose.pose.position.x;
     robot_localizer.X.translation().y() = pose_msg->pose.pose.position.y;

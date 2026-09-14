@@ -12,9 +12,6 @@ find_package(catkin REQUIRED COMPONENTS
     sensor_msgs
     geometry_msgs
     nav_msgs
-    tf2
-    tf2_ros
-    tf2_geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -109,7 +106,7 @@ find_package(Eigen3 REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  LIBRARIES listener
-   CATKIN_DEPENDS roscpp sensor_msgs geometry_msgs nav_msgs tf2 tf2_ros tf2_geometry_msgs  
+   CATKIN_DEPENDS roscpp sensor_msgs geometry_msgs nav_msgs  
 #  DEPENDS system_lib
 )
 
